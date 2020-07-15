@@ -1,0 +1,69 @@
+<!---Question 1 :
+Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn().
+etc...
+--->
+<html>
+
+<head>
+    <title>DAY2 ASSIGNMENT 1</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h2>DIFFERENT CONSOLE METHODS</h2>
+    <script>
+        // console.log() method    
+        console.log('abc');
+
+
+        // console.error() method  
+        console.error('This is a simple error');
+
+
+        // console.warn() method  
+        console.warn('This is a warning.');
+
+
+        // console.time() and console.timeEnd() method 
+        console.time('abc');
+        let fun = function () {
+            console.log('fun is running');
+        }
+        let fun2 = function () {
+            console.log('fun2 is running..');
+        }
+        fun(); // calling fun(); 
+        fun2(); // calling fun2(); 
+        console.timeEnd('abc');
+
+
+        // console.table() method 
+        console.table({ 'a': 1, 'b': 2 });
+
+
+        // console.count() method 
+        for (let i = 0; i < 5; i++) {
+            console.count(i);
+        }
+
+
+        // console.group() and console.groupEnd() method 
+        console.group('simple');
+        console.warn('warning!');
+        console.error('error here');
+        console.log('vivi vini vici');
+        console.groupEnd('simple');
+        console.log('new section');
+
+        // console.clear() method 
+        // console.clear();
+
+
+    </script>
+</body>
+
+
+</html>

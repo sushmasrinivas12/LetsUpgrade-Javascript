@@ -1,0 +1,68 @@
+<!----Question 2 :
+Write the difference between var, let and const with code examples.-->
+<html>
+
+<head>
+  <title>DAY2 ASSIGNMENT 2</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <h2>DIFFERENCE BETWEEN LET, VAR AND CONST</h2>
+  <p>
+    <b> let:</b> The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by
+    curly braces i.e. {}.<br>
+    “let” and “const” are“block scoped”
+    <script>
+      {
+        let a = 10;
+        console.log(a);
+      }
+      //block 1
+      {
+        a++;
+        console.log(a);
+      }
+      //block 2
+      /* Since we are using "let a=10", scope of "a" is limited to block 1 and "a" is not recognized in block 2 */
+
+    </script>
+  <p>
+    <b>var:</b> The scope of a variable defined with the keyword “var” is limited to the “function” within which it is
+    defined.<br>If it is defined outside any function, the scope of the variable is global.
+    var is “function scoped”.
+  </p>
+  <script>
+    {
+      var b = 10;
+      console.log(b);
+    } //block 1
+    {
+      b++;
+      console.log(b);
+    }
+    //block 2
+    /* Since we are using "var a=10", scope of "a" is limited to the function within which it is defined. In this case it is within the global function scope */
+
+  </script>
+  <p>
+    <b>const: </b> The scope of a variable defined with the keyword “const” is limited to the block defined by curly
+    braces. However if a variable is defined with keyword const, it cannot be reassigned.<br>
+    “const” cannot be re-assigned to a new value. However it <b>CAN</b> be mutated.
+  </p>
+  <script>
+    {
+      const pi = 3.14;
+      console.log(pi);
+    } //block 1
+    {
+      console.log(pi);
+    }
+    //block 2
+    /* Since we are using "const PI=3.14", scope of "PI" is limited to block 1 and "PI" is not recognized in block 2 */
+  </script>
+
+</body>
+
+
+</html>
